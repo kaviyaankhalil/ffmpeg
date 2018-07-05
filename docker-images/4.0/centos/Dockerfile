@@ -367,6 +367,7 @@ ENTRYPOINT  ["ffmpeg"]
 ENV LD_LIBRARY_PATH=/usr/local/lib64
 
 COPY --from=build /usr/local/ /usr/local/
+COPY --from=build /opt/ /opt
 
 # Let's make sure the app built correctly
 # Convenient to verify on https://hub.docker.com/r/jrottenberg/ffmpeg/builds/ console output
